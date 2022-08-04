@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Sweetwedding - Responsive OnePage HTML5 Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/item2/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/item2/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="tailor_css/bootstrap.min.css">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="tailor_css/pogo-slider.min.css">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="tailor_css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="tailor_css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="tailor_css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="main" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+	<!-- LOADER -->
+    <div id="preloader">
+		<div class="preloader pulse">
+			<h3>Tailor Shop</h3>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+	
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="#"><img src="images/item2/mainlogo5.png" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd"
+						aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav ">
+                        <li><a class="nav-link active" href="#main">Main</a></li>
+                        <li><a class="nav-link" href="#tailorshop">TailorShop</a></li>
+                        <li><a class="nav-link" href="#process">Process</a></li>
+                        <li><a class="nav-link" href="#style">Style</a></li>
+                        <li><a class="nav-link" href="#gallery">Gallery</a></li>
+						<li><a class="nav-link" href="#specialpoint">Special Point</a></li>
+                        <li><a class="nav-link" href="#events">Events</a></li>
+						<li><a class="nav-link" href="#contact">Contact</a></li>
+						<li><a class="nav-link" href="/">First Home</a></li>
+
+						<form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
+							<input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+						</form>
+					</ul>
+                </div>
+            </div>
+        </nav>
+	</header>
+	<!-- End header -->
+
+	<!-- Start Banner -->
+	<div class="home-slider">
+		<ul class="rslides">
+			<li><img src="images/item2/slider-01.jpg" alt=""></li>
+			<li><img src="images/item2/slider-02.jpg" alt=""></li>
+			<li><img src="images/item2/slider-03.jpg" alt=""></li>
+		</ul>
+		<div class="lbox-details">
+			<h1>Tailor Shop</h1>
+			<h1>Custom Made Suit</h1>
+			<div class="countdown main-time clearfix">
+				<div id="timer">
+					<h3> 21 September 2022</h3>
+					<div id="days"></div>
+					<div id="hours"></div>
+					<div id="minutes"></div>
+					<div id="seconds"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Banner -->
+
+	<!-- Start tailorshop-->
+	<div id="tailorshop" class="tailorshop-box">
+		<div class="tailorshop-a1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="title-box">
+							<h2><span>Summary</span></h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="row align-items-center tailorshop-main-info">
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="tailorshop-m">
+									<div class="tailorshop-img">
+										<img class="img-fluid" src="images/item2/tailorshop-01.jpg" alt="" />
+									</div>
+									<ul>
+										<li><a href="http://elevato.co.kr/main/index.php"><i class="fa fa-home"></i></a></li>
+										<li><a href="https://www.instagram.com/official_elevato/"><i class="fa fa-instagram"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12">
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Tailor Shop</span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<p style = "font-size:1.5em;">테일러샵 (Tailor Shop)이란  고급 맞춤복을 제작하는 양복점이자 <br>
+									양질의 비스포크 서비스를 제공하는 비스포크 수트 전문 매장입니다. <br>
+									비스포크(BESPOKE)란 여러가지 뜻이 있지만 <br>
+									쉽게 설명하면 "개인에게 맞춰제작한다"라는 뜻을 가지기도하며, <br>
+									심지와 원단을 손바느질로 부착(비접착)으로 만들어진 핸드메이드제품을 뜻합니다. </p>
+							</div>
+						</div>
+						<div class="row align-items-center tailorshop-main-info">
+							<div class="col-lg-4 col-md-6 col-sm-12">
+								<div class="tailorshop-m">
+									<div class="tailorshop-img">
+										<img class="img-fluid" src="images/item2/tailorshop-02.jpg" alt="" />
+									</div>
+									<ul>
+										<li><a href="https://www.leselu.com/"><i class="fa fa-home"></i></a></li>
+										<li><a href="https://www.instagram.com/leselu_korea/"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="https://www.facebook.com/leselu.suit"><i class="fa fa-facebook"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12">
+								<h2> <i class="fa fa-heart-o" aria-hidden="true"></i> <span>Difference </span> <i class="fa fa-heart-o" aria-hidden="true"></i></h2>
+								<p style = "font-size:1.5em;"> 테일러샵은 이름 뜻대로 Tailor 즉, 재단사가 있는 매장입니다. <br>
+								원단과 디자인을 고르고 채촌을 한 구체적인 정보를 통해 패턴을 만들고 <br>
+								맞춤으로 수트를 제작하는 체계적인 비스포크 전문 매장입니다.<br>
+								기성복 또는 편집샵과 달리 모든고객을 관리해드리고 수트 A/S 서비스도 운영하는 점도 있어,
+								패션매장 운영시스템부분도 크게 차이가 있기에 다릅니다. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End tailorshop  -->
+	
+	<!-- Start Process -->
+	<div id="process" class="process-box main-timeline-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Process</h2>
+<!--						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>-->
+					</div>
+				</div>
+			</div>
+			
+			<div class="timeLine">
+				<div class="row">
+					<div class="lineHeader hidden-sm hidden-xs"></div>
+					<div class="lineFooter hidden-sm hidden-xs"></div>
+
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item" >
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">01</span>
+								</div>
+								<div class="image">
+									<img src="images/item2/process-01.jpg" alt="" />
+									<div class="title">
+										<h2>원단&디자인 <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent" >
+									<p class="lead" >수트 맞춤 과정에서 가장 중요한 과정은 첫번째로 맞춤을 진행하시는 고객들의 수많은 수트원단과 원하는 수트 디자인을 고르는 과정입니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">02</span>
+								</div>
+								<div class="image">
+									<img src="images/item2/process-02.jpg" alt="" />
+									<div class="title">
+										<h2>채촌 <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">채촌이라는것은 수트를 착용하실 고객분의 신체를 꼼꼼히 하나도 빠짐없이 신체사이즈를 재고 신체 특징까지 정확하게 체크하여 수트패턴을 만들기 전에 필수로 하는 과정입니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">03</span>
+								</div>
+								<div class="image">
+									<img src="images/item2/process-03.jpg" alt="" />
+									<div class="title">
+										<h2>패턴&재단 <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">채촌과정을 진행한 후에 신체사이즈와 신체주요특징을 고려해 패턴을 그린 뒤, 원단을 재단을 하는 과정입니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">04</span>
+								</div>
+								<div class="image">
+									<img src="images/item2/process-04.jpg" alt="" />
+									<div class="title">
+										<h2>1차 가봉 <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">1차 가봉은 완성된 수트를 만들기 위해서 재단으로 만든 수트를 입고 체형보완 및 사이즈체크를 하는 과정입니다. </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">05</span>
+								</div>
+								<div class="image">
+									<img src="images/item2/process-05.jpg" alt="" />
+									<div class="title">
+										<h2>최종 가봉 <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">최종적으로 진행하는 체형 및 사이즈체크 과정입니다. 수정할 부분이 없을 경우에는 수트 픽업으로 진행됩니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+							<div class="caption">
+								<div class="star center-block">
+									<span class="h3">06</span>
+								</div>
+								<div class="image">
+									<img src="images/item2/process-06.jpg" alt="" />
+									<div class="title">
+										<h2>수트 픽업 <i class="fa fa-angle-right" aria-hidden="true"></i></h2>
+									</div>
+								</div>
+								<div class="textContent">
+									<p class="lead">완성된 수트를 착용하신 뒤 픽업하시는 최종 수트과정입니다.</p>
+								</div>
+							</div>
+						</div>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- End Process -->
+
+
+	<!-- Start style -->
+	<div id="style" class="style-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Suit Style</h2>
+<!--						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>-->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="style-img">
+							<img class="img-fluid" src="images/item2/style-01.jpg" alt="" />
+						</div>
+						<div class="style-info">
+							<h4> Single Suit </h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="style-img">
+							<img class="img-fluid" src="images/item2/style-02.jpg" alt="" />
+						</div>
+						<div class="style-info">
+							<h4>Three Piece Suit </h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="style-img">
+							<img class="img-fluid" src="images/item2/style-03.jpg" alt="" />
+						</div>
+						<div class="style-info">
+							<h4> Double Suit </h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="style-img">
+							<img class="img-fluid" src="images/item2/style-04.jpg" alt="" />
+						</div>
+						<div class="style-info">
+							<h4> Tuxedo </h4>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="style-img">
+							<img class="img-fluid" src="images/item2/style-05.jpg" alt="" />
+						</div>
+						<div class="style-info">
+							<h4> Lady Suit </h4>
+							<p>{ All Design }</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="single-team-member">
+						<div class="style-img">
+							<img class="img-fluid" src="images/item2/style-06.jpg" alt="" />
+						</div>
+						<div class="style-info">
+							<h4> Long Coat </h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End style -->
+
+	<!-- Start Gallery -->
+	<div id="gallery" class="gallery-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Gallery</h2>
+						<p style="color:black; font-size: 20px;" > World Suit Festival </p>
+						<a style="color:blue; font-size: 25px;" href="https://www.google.com/search?q=pitti+uomo&sxsrf=ALiCzsZJn-tKY2P2NKUT1OVD0ZSPEgojpw%3A1657864300960&ei=bADRYuqSOum22roPpq2KqAU&ved=0ahUKEwjq-Pnlmfr4AhVpm1YBHaaWAlUQ4dUDCA4&uact=5&oq=pitti+uomo&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIKCAAQgAQQhwIQFDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BggjECcQEzoECCMQJzoLCAAQgAQQsQMQgwE6CgguEMcBENEDEAM6BAgAEAM6EAgAEIAEELEDEIMBEEYQ-QE6FAguEIAEELEDEIMBEMcBENEDENQCOggIABCABBCxAzoRCC4QgAQQsQMQxwEQ0QMQ1AI6DgguEIAEELEDEIMBENQCOgUILhCABDoLCC4QgAQQxwEQrwFKBAhBGABKBAhGGABQAFilG2DlHGgAcAF4AIABlgGIAaIJkgEEMC4xMJgBAKABAcABAQ&sclient=gws-wiz#bsht=CgRmYnNtEgQIBBAA"> Pitti Uomo </a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="popup-gallery clearfix">
+					<li>
+						<a href="images/item2/gallery-01.jpg">
+							<img class="img-fluid" src="images/item2/gallery-01.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-02.jpg">
+							<img class="img-fluid" src="images/item2/gallery-02.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-03.jpg">
+							<img class="img-fluid" src="images/item2/gallery-03.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-04.jpg">
+							<img class="img-fluid" src="images/item2/gallery-04.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-05.jpg">
+							<img class="img-fluid" src="images/item2/gallery-05.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-06.jpg">
+							<img class="img-fluid" src="images/item2/gallery-06.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-07.jpg">
+							<img class="img-fluid" src="images/item2/gallery-07.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+					<li>
+						<a href="images/item2/gallery-08.jpg">
+							<img class="img-fluid" src="images/item2/gallery-08.jpg" alt="single image">
+							<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- End Gallery -->
+	
+	<!-- Start specialpoint -->
+
+	<div id="specialpoint" class="specialpoint-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>specialpoint</h2>
+						<p style="color:black; font-size: 20px;" > 테일러샵에서는 기성복이 안맞는 분들의 주요 특징들을 파악한 뒤 패턴으로 보완을 해드리고 있습니다. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="serviceBox">
+						<div style = "font-size:1.5em;" class="service-icon">Shoulder</div>
+						<img class="img-fluid" src="images/item2/specialpoint-01.jpg" alt="single image">
+						<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						<h3 class="title"> 패턴&패드 사용으로 어깨보완 </h3>
+							<p class="description"; style="color:black; font-size: 17px;" >
+								어깨모양은 주로 내려가있는 하견<br> 수직선으로 있는 중견<br> 어깨끝쪽이 올라가있는 상견
+							</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="serviceBox">
+						<div style = "font-size:1.23em;" class="service-icon">WaistShape</div>
+						<img class="img-fluid" src="images/item2/specialpoint-02.jpg" alt="single image">
+						<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						<h3 class="title">상체체형에 맞는 패턴제작 </h3>
+							<p class="description"; style="color:black; font-size: 17px;" >
+								허리가 앞으로 굽혀진 굴신체형<br> 가장 정상인 일자체형 <br>  허리가 뒤로 처져 있는 반신체형
+							</p>
+					</div>
+				</div>
+
+                <div class="col-md-4 col-sm-6">
+					<div class="serviceBox">
+						<div style = "font-size:1.23em;" class="service-icon">ThighShape</div>
+						<img class="img-fluid" src="images/item2/specialpoint-03.jpg" alt="single image">
+						<span class="overlay"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+						<h3 class="title">하체체형에 맞는 패턴제작 </h3>
+							<p class="description"; style="color:black; font-size: 17px;" >
+								하체가 앞으로 굽혀진 하반신체형<br> 가장 정상인 일자체형 <br>  하체가 뒤로 처져 있는 하굴신체형
+							</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- End Specialpoint -->
+	
+	<!-- Start Events -->
+	<div id="events" class="events-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Wedding Exhibition Events</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="event-inner">
+						<div class="event-img">
+							<img class="img-fluid" src="images/item2/event-img-01.jpg" alt="" />
+						</div>
+						<h2>아이니웨딩 웨딩박람회</h2>
+						<p>Summer Bloom 웨딩초대전<br>
+							7.25-8.28 아이니웨딩 특별초대전<br>
+							당신만을 위한 고품격 웨딩플레이스</p>
+						<a href="https://www.iniwedding.com/event/weddingfair.html?TID2=NBR&n_media=27758&n_query=%EC%95%84%EC%9D%B4%EB%8B%88%EC%9B%A8%EB%94%A9&n_rank=1&n_ad_group=grp-a001-04-000000018668923&n_ad=nad-a001-04-000000194045636&n_keyword_id=nkw-a001-04-000003353209663&n_keyword=%EC%95%84%EC%9D%B4%EB%8B%88%EC%9B%A8%EB%94%A9&n_campaign_type=4&n_contract=tct-a001-04-000000000530395&n_ad_group_type=5&NaPm=ct%3Dl61uhxaw%7Cci%3D0yO0003RzbXw4SSuPL3F%7Ctr%3Dbrnd%7Chk%3Ddb9bb80fd03895c2aa4c8e692f14cec3e6c72e88">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="event-inner">
+						<div class="event-img">
+							<img class="img-fluid" src="images/item2/event-img-02.jpg" alt="" />
+						</div>
+						<h2>제이웨딩 웨딩박람회 </h2>
+						<p>8월20~21일 제이웨딩박람회<br>
+							SC컨벤션, 토스트기, 라면포트 증정<br>
+							웨딩홀 혜택 맞춤추천, 스드메 혼수 혜택</p>
+						<a href="http://jwed.co.kr/Fair/weddingfair.asp?url_type=NBR&NaPm=ct%3Dl61uneu0%7Cci%3D0zK0003RzrXwjIkLofpW%7Ctr%3Dbrnd%7Chk%3D333a878e62ce43f7afed31cf04b5f5c5ccc2c665">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<div class="event-inner">
+						<div class="event-img">
+							<img class="img-fluid" src="images/item2/event-img-03.jpg" alt="" />
+						</div>
+						<h2>디자인웨딩 웨딩박람회 </h2>
+						<p> 8/13~14일 디자인웨딩 페어<br>
+							스위스 그랜드 서울호텔 / 전일 무료주차<br>
+							15년 연속 올해의 브랜드 대상 선정기업 </p>
+						<a href="https://www.designwedding.net/sub_main/event/m62_view.php?page=1&div=1&idx=1126">See location <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Events -->
+	
+	<!-- Start Contact -->
+	<div id="contact" class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="title-box">
+						<h2>Contact wth us</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 col-xs-12">
+				  <div class="contact-block">
+					<form id="contactForm">
+					  <div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+								<div class="help-block with-errors"></div>
+							</div>                                 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<select class="custom-select d-block form-control" id="guest" required data-error="Please select an item in the list.">
+								  <option disabled selected>Number Of Guest*</option>
+								  <option value="1">1</option>
+								  <option value="2">2</option>
+								  <option value="3">3</option>
+								  <option value="4">4</option>
+								  <option value="5">5</option>
+								</select>
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<select class="custom-select d-block form-control" id="event" required data-error="Please select an item in the list.">
+								  <option disabled selected>I Am Attending*</option>
+								  <option value="1">All events</option>
+								  <option value="2">Wedding ceremony</option>
+								  <option value="3">Reception party</option>
+								</select>
+								<div class="help-block with-errors"></div>
+							</div> 
+						</div>
+						<div class="col-md-12">
+							<div class="form-group"> 
+								<textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
+								<div class="help-block with-errors"></div>
+							</div>
+							<div class="submit-button text-center">
+								<button class="btn btn-common" id="submit" type="submit">Send Message</button>
+								<div id="msgSubmit" class="h3 text-center hidden"></div> 
+								<div class="clearfix"></div> 
+							</div>
+						</div>
+					  </div>            
+					</form>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact -->
+
+	<!-- Start Map -->
+	<div class="ww-section ww-rsvp-detail" id="map">
+		<div class="container">
+			<div class="col text-center">
+				<h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Noto Serif KR', serif;">이달의 웨딩홀 추천</h2>
+				<div>
+					<h3 style="font-family: 'Noto Serif KR', serif;">Villa de GD Chungdam  빌라드지디 청담</h3>
+					<h4 style="font-family: 'Noto Serif KR', serif;">(서울 강남구 학동로 519)</h4>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-md-12">
+					<div class="my-3 text-center">
+						<a href="http://naver.me/xM28SuGC">
+							<img alt="naver-map" class="map-icon" id="naver-map"
+								 src="images/item2/naver-map.png"/>
+						</a>
+						<a href="http://kko.to/XnNXqHtwd">
+							<img alt="kakao-map" class="map-icon" id="kakao-map"
+								 src="images/item2/kakao-map.png"/>
+						</a>
+						<a href="https://g.page/villadegdcd?share">
+							<img alt="google-map" class="map-icon" id="google-map"
+								 src="images/item2/google-map.png"/>
+						</a>
+					</div>
+					<div class="col text-center">
+						<label style="font-family: 'Noto Serif KR', serif; font-size: 22px;">
+							위치 - 청담역 12출구앞에서 1분 거리 ( 출구에서 정면 )
+						</label>
+					</div>
+					<div class="my-3">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d920.6474737465471!2d127.05528222623477!3d37.52006380766125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca5419460f02b%3A0xc83d0b0bd4ba3c31!2z67mM652865Oc7KeA65SUIOyyreuLtA!5e0!3m2!1sko!2skr!4v1657168982277!5m2!1sko!2skr" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<!-- End Map -->
+
+	<!-- Start Footer -->
+	<footer class="footer-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<p class="footer-company-name">All Rights Reserved. &copy; 2022 <a href="#">donghoon1702</a> Design By : <a href="https://html.design/">html design</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- ALL JS FILES -->
+	<script src="tailor_js/jquery.min.js"></script>
+	<script src="tailor_js/popper.min.js"></script>
+	<script src="tailor_js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="tailor_js/jquery.magnific-popup.min.js"></script>
+    <script src="tailor_js/jquery.pogo-slider.min.js"></script>
+	<script src="tailor_js/slider-index.js"></script>
+	<script src="tailor_js/smoothscroll.js"></script>
+	<script src="tailor_js/responsiveslides.min.js"></script>
+    <script src="tailor_js/timeLine.min.js"></script>
+	<script src="tailor_js/form-validator.min.js"></script>
+    <script src="tailor_js/contact-form-script.js"></script>
+    <script src="tailor_js/custom.js"></script>
+</body>
+</html>
