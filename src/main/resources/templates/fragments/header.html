@@ -1,48 +1,66 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
 
-<div th:fragment="header">
-<!--  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">-->
-<!--    <a class="navbar-brand" href="/"><img src="images/item2/mainlogo5.png" alt="image"></a>-->
-<!--    <button class="navbar-toggler" type="button" data-toggle="collapse"-->
-<!--            data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"-->
-<!--            aria-expanded="false" aria-label="Toggle navigation">-->
-<!--      <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
-<!--    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">-->
-<!--      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">-->
-<!--        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">-->
-<!--          <a class="nav-link" href="/admin/item/new" style="color:white; font-size: 17px;">상품 등록</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">-->
-<!--          <a class="nav-link" href="/admin/items" style="color:white; font-size: 17px;">상품 관리</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="isAuthenticated()">-->
-<!--          <a class="nav-link" href="/cart" style="color:white; font-size: 17px;">장바구니</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="isAuthenticated()">-->
-<!--          <a class="nav-link" href="/orders" style="color:white; font-size: 17px;">주문내역</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="isAnonymous()">-->
-<!--          <a class="nav-link" href="/member/login" style="color:white; font-size: 17px;">로그인</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="isAuthenticated()">-->
-<!--          <a class="nav-link" href="/member/logout" style="color:white; font-size: 17px;">로그아웃</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="isAuthenticated()">-->
-<!--          <a class="nav-link" href="/tailorshop" style="color:white; font-size: 17px;">Tailor Shop</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item" sec:authorize="isAuthenticated()">-->
-<!--          <a class="nav-link" href="/hanbok" style="color:white; font-size: 17px;">한복</a>-->
-<!--        </li>-->
-<!--      </ul>-->
-<!--      <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">-->
-<!--        <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="color:white;">Search</button>-->
-<!--      </form>-->
-<!--    </div>-->
-<!--  </nav>-->
+<!--<div th:fragment="header">-->
+<!--    <nav class="fh5co-nav" role="navigation">-->
+<!--        <div class="container">-->
+<!--            <a class="navbar-brand" href="hanbok"><img src="images/item2/mainlogo5.png" alt="image"></a>-->
+<!--            <div class="row">-->
+<!--                <div class="col-xs-2">-->
+<!--                    &lt;!&ndash;					<div id="fh5co-logo"><a href="hanbok">Wedding<strong>.</strong></a></div>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">-->
+<!--                    <nav class="fh5co-nav" role="navigation">-->
+<!--                        <div class="container">-->
+<!--                            <a class="navbar-brand" href="hanbok"><img src="images/item2/mainlogo5.png" alt="image"></a>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xs-2">-->
+<!--                                    &lt;!&ndash;					<div id="fh5co-logo"><a href="hanbok">Wedding<strong>.</strong></a></div>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">-->
+<!--                                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">-->
+<!--                                        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">-->
+<!--                                            <a class="nav-link" href="/admin/item/new" style="color:#81C9F6; font-size: 17px;"><b>상품 등록</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">-->
+<!--                                            <a class="nav-link" href="/admin/items" style="color:#81C9F6; font-size: 17px;"><b>상품 관리</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="isAuthenticated()">-->
+<!--                                            <a class="nav-link" href="/cart" style="color:#BAF8F2; font-size: 17px;"><b>장바구니</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="isAuthenticated()">-->
+<!--                                            <a class="nav-link" href="/orders" style="color:#81C9F6; font-size: 17px;"><b>주문내역</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="isAnonymous()">-->
+<!--                                            <a class="nav-link" href="/member/login" style="color:#81C9F6; font-size: 17px;"><b>로그인</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="isAuthenticated()">-->
+<!--                                            <a class="nav-link" href="/member/logout" style="color:Black; font-size: 17px;"><b>로그아웃</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="isAuthenticated()">-->
+<!--                                            <a class="nav-link" href="/tailorshop" style="color:#81C9F6; font-size: 17px;"><b>Tailor Shop</b></a>-->
+<!--                                        </li>-->
+<!--                                        <li class="nav-item" sec:authorize="isAuthenticated()">-->
+<!--                                            <a class="nav-link" href="/hanbok" style="color:#FB76FB; font-size: 17px;"><b>한복</b></a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                    <form class="form-inline mr-auto mt-2 mt-lg-0 " style="float:right" th:action="@{/}" method="get">-->
+<!--                                        <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="color:white;">Search</button>-->
+<!--                                    </form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </nav>-->
+<!--                    <form class="form-inline mr-auto mt-2 mt-lg-0 " style="float:right" th:action="@{/}" method="get">-->
+<!--                        <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="color:white;">Search</button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
 <!--</div>-->
 
-</html>
+<!--</html>-->

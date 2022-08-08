@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
@@ -49,9 +50,15 @@ public class MemberController {
     }
 
     // 로그인 페이지
-    @GetMapping("/login")
+    @RequestMapping(value ="/login" , method= RequestMethod.GET)
     public String memberLogin() {
         return "member/loginForm";
+    }
+
+    @RequestMapping(value="/login/success", method = RequestMethod.GET)
+    public String memberLoginSuccess(Model model) {
+        model.addAttribute("loginSuccessMsg", "로그인성공.");
+        return "/";
     }
 
     // 로그인 실패
