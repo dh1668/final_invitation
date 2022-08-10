@@ -31,8 +31,8 @@ public class MainController {
 
     }
 
-    @GetMapping("/suit")
-    public String showSuit(){
-        return "/invitation/index";
-    }
+//    @GetMapping(value="/")
+//    public String maintest(){
+//        return "maintest";
+//    }
 }
