@@ -46,28 +46,28 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
-                            <a class="nav-link" href="/admin/item/new" style="color:white; font-size: 17px;">상품 등록</a>
+                            <a class="nav-link" href="/admin/item/new" style="color:#81C9F6; font-size: 17px;"><b>상품 등록</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
-                            <a class="nav-link" href="/admin/items" style="color:white; font-size: 17px;">상품 관리</a>
+                            <a class="nav-link" href="/admin/items" style="color:#81C9F6; font-size: 17px;"><b>상품 관리</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/cart" style="color:white; font-size: 17px;">장바구니</a>
+                            <a class="nav-link" href="/cart" style="color:#BAF8F2; font-size: 17px;"><b>장바구니</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/orders" style="color:white; font-size: 17px;">주문내역</a>
+                            <a class="nav-link" href="/orders" style="color:#81C9F6; font-size: 17px;"><b>주문내역</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAnonymous()">
-                            <a class="nav-link" href="/member/login" style="color:white; font-size: 17px;">로그인</a>
+                            <a class="nav-link" href="/member/login" style="color:#81C9F6; font-size: 17px;"><b>로그인</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/member/logout" style="color:white; font-size: 17px;">로그아웃</a>
+                            <a class="nav-link" href="/member/logout" style="color:Black; font-size: 17px;"><b>로그아웃</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/tailorshop" style="color:white; font-size: 17px;">Tailor Shop</a>
+                            <a class="nav-link" href="/tailorshop" style="color:#81C9F6; font-size: 17px;"><b>Tailor Shop</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/hanbok" style="color:white; font-size: 17px;">한복</a>
+                            <a class="nav-link" href="/hanbok" style="color:#FB76FB; font-size: 17px;"><b>한복</b></a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
