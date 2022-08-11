@@ -1,7 +1,179 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{main}">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{mainitem}">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns:sec="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Wedding &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+  <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+  <meta name="author" content="FREEHTML5.CO" />
+
+  <!--
+    //////////////////////////////////////////////////////
+
+    FREE HTML5 TEMPLATE
+    DESIGNED & DEVELOPED by FREEHTML5.CO
+
+    Website: 		http://freehtml5.co/
+    Email: 			info@freehtml5.co
+    Twitter: 		http://twitter.com/fh5co
+    Facebook: 		https://www.facebook.com/fh5co
+
+    //////////////////////////////////////////////////////
+     -->
+  <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="member_css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="member_css/icomoon.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="member_css/bootstrap.css">
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="member_css/magnific-popup.css">
+
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="member_css/owl.carousel.min.css">
+  <link rel="stylesheet" href="member_css/owl.theme.default.min.css">
+
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="member_css/style.css">
+
+  <!-- Modernizr JS -->
+  <script src="member_js/modernizr-2.6.2.min.js"></script>
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+  <script src="member_js/respond.min.js"></script>
+  <![endif]-->
+
+
+  <!-- CSS only -->
+  <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >-->
+  <!--    <link th:href="@{/css/mainLayout.css}" rel="stylesheet">-->
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <th:block layout:fragment="script"></th:block>
+  <th:block layout:fragment="css"></th:block>
+
+</head>
+
+<body>
+
+<div class="fh5co-loader"></div>
+
+<div id="page">
+  <nav class="fh5co-nav" role="navigation">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="images/item2/mainlogo5.png" alt="image"></a>
+      <div class="row">
+        <div class="col-xs-2">
+          <!--					<div id="fh5co-logo"><a href="hanbok">Wedding<strong>.</strong></a></div>-->
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+              <a class="nav-link" href="/admin/item/new" style="color:#81C9F6; font-size: 17px;"><b>상품 등록</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+              <a class="nav-link" href="/admin/items" style="color:#81C9F6; font-size: 17px;"><b>상품 관리</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+              <a class="nav-link" href="/cart" style="color:#BAF8F2; font-size: 17px;"><b>장바구니</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+              <a class="nav-link" href="/orders" style="color:#81C9F6; font-size: 17px;"><b>주문내역</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAnonymous()">
+              <a class="nav-link" href="/member/login" style="color:#81C9F6; font-size: 17px;"><b>로그인</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+              <a class="nav-link" href="/member/logout" style="color:Black; font-size: 17px;"><b>로그아웃</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+              <a class="nav-link" href="/tailorshop" style="color:#81C9F6; font-size: 17px;"><b>Tailor Shop</b></a>
+            </li>
+            <li class="nav-item" sec:authorize="isAuthenticated()">
+              <a class="nav-link" href="/hanbok" style="color:#FB76FB; font-size: 17px;"><b>한복</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/item2/hanbok_images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="display-t">
+            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+              <h1>Joefrey &amp; Sheila</h1>
+              <h2>We Are Getting Married</h2>
+              <div class="simply-countdown simply-countdown-one"></div>
+              <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <footer id="fh5co-footer" role="contentinfo">
+    <div class="container">
+      <div class="row copyright">
+        <div class="col-md-12 text-center">
+          <p>
+            <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small>
+            <small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
+          </p>
+          <p>
+          <ul class="fh5co-social-icons">
+            <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-facebook"></i></a></li>
+            <li><a href="#"><i class="icon-linkedin"></i></a></li>
+            <li><a href="#"><i class="icon-dribbble"></i></a></li>
+          </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>
+
+
 
 <th:block layout:fragment="css">
   <style>
@@ -29,4 +201,48 @@
   </form>
   로그인이 바로 안되는경우 : 다시 로그인버튼 눌러보시길 바랍니다.
 </div>
+
+<!-- jQuery -->
+<script src="member_js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="member_js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="member_js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="member_js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="member_js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="member_js/jquery.countTo.js"></script>
+
+<!-- Stellar -->
+<script src="member_js/jquery.stellar.min.js"></script>
+<!-- Magnific Popup -->
+<script src="member_js/jquery.magnific-popup.min.js"></script>
+<script src="member_js/magnific-popup-options.js"></script>
+
+<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+<script src="member_js/simplyCountdown.js"></script>
+<!-- Main -->
+<script src="member_js/main.js"></script>
+
+<script>
+    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+
+    // default example
+    simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+</script>
+</body>
 </html>
