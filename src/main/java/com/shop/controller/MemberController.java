@@ -54,11 +54,11 @@ public class MemberController {
         return "member/loginForm";
     }
 
-    //로그인 성공
-    @PostMapping("success")
-    public String memberLoginSuccess(){
-        return "maintest";
-    }
+//    //로그인 성공
+//    @PostMapping("success")
+//    public String memberLoginSuccess(){
+//        return "maintest";
+//    }
 
 
 
