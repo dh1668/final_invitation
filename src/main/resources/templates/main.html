@@ -49,7 +49,9 @@
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="css/icomoon.css">
     <!-- Bootstrap  -->
-<!--    <link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- 장바구니 , 상품창 , 주문목록에서는 nav와 상품부트스트랩충돌로인해 끈거임  -->
+
 
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -89,14 +91,18 @@
 <div class="fh5co-loader"></div>
 
 <div id="page">
-    <nav class="fh5co-nav" role="navigation">
+    <nav class="fh5co-navbar header-nav navbar-expand-lg"style="background-image:url(images/item2/hanbok_images/img_bg_3.jpg);">
         <div class="container">
-            <a class="navbar-brand" href="/"><img src="images/item2/mainlogo5.png" alt="image"></a>
-            <div class="row">
-                <div class="col-xs-2">
-                    <!--					<div id="fh5co-logo"><a href="hanbok">Wedding<strong>.</strong></a></div>-->
-                </div>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="overlay"></div>
+            <a class="navbar-brand" href="/"><img src="images/item2/mainlogo6.png" alt="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd"
+                    aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                <ul class="navbar-nav ">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
                             <a class="nav-link" href="/admin/item/new" style="color:#81C9F6; font-size: 17px;"><b>상품 등록</b></a>
@@ -123,7 +129,11 @@
                             <a class="nav-link" href="/hanbok" style="color:#FB76FB; font-size: 17px;"><b>한복</b></a>
                         </li>
                     </ul>
-                </div>
+                    <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
+                        <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="검색" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
+                    </form>
+                </ul>
             </div>
         </div>
     </nav>

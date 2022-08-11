@@ -85,13 +85,13 @@
 
 <div layout:fragment="content" class="content-mg">
 
-    <h2 class="mb-4">
-        주문 내역
+    <h2 class="mb-4" style="color:#BAF8F2;">
+        <b>주문 내역</b>
     </h2>
 
     <div th:each="order : ${orders.getContent()}">
 
-        <div class="d-flex mb-3 align-self-center">
+        <div class="d-flex mb-3 align-self-center" style="color:#BAF8F2;">
             <h4 th:text="${order.orderDate} + ' 주문'"></h4>
             <div class="ml-3">
                 <th:block th:if="${order.orderStatus == T(com.shop.constant.OrderStatus).ORDER}">
