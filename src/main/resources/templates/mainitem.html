@@ -30,7 +30,7 @@
 </head>
 
 
-<body style="background-color:#0E0B30;">
+<body style="background-color:#C2CEF2;">
 <!--    <div th:replace="fragments/header::header"></div>-->
 <div th:fragment="header">
     <header class="top-header">
@@ -57,19 +57,19 @@
                             <a class="nav-link" href="/cart" style="color:#BAF8F2; font-size: 17px;"><b>장바구니</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/orders" style="color:#81C9F6; font-size: 17px;"><b>주문내역</b></a>
-                        </li>
-                        <li class="nav-item" sec:authorize="isAnonymous()">
-                            <a class="nav-link" href="/member/login" style="color:#81C9F6; font-size: 17px;"><b>로그인</b></a>
+                            <a class="nav-link" href="/orders" style="color:primary; font-size: 17px;"><b>주문내역</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/member/logout" style="color:Black; font-size: 17px;"><b>로그아웃</b></a>
-                        </li>
-                        <li class="nav-item" sec:authorize="isAuthenticated()">
-                            <a class="nav-link" href="/tailorshop" style="color:#81C9F6; font-size: 17px;"><b>Tailor Shop</b></a>
+                            <a class="nav-link" href="/tailorshop" style="color:#151953; font-size: 17px;"><b>Tailor Shop</b></a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
                             <a class="nav-link" href="/hanbok" style="color:#FB76FB; font-size: 17px;"><b>한복</b></a>
+                        </li>
+                        <li class="nav-item" sec:authorize="isAnonymous()">
+                            <a class="nav-link" href="/member/login" style="color:white; font-size: 17px;"><b>로그인</b></a>
+                        </li>
+                        <li class="nav-item" sec:authorize="isAuthenticated()">
+                            <a class="nav-link" href="/member/logout" style="color:white; font-size: 17px;"><b>로그아웃</b></a>
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
